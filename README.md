@@ -4,7 +4,7 @@ Proyecto desarrollado durante el bootcamp de desarrollo web. Una billetera virtu
 
 ## 🚀 Demo
 
-Abre `index.html` en tu navegador para comenzar.
+Accede con el siguiente link > https://milonegrete.github.io/alke_wallet/
 
 **Credenciales de prueba:**
 - **Usuario:** admin@alkewallet.com
@@ -12,6 +12,7 @@ Abre `index.html` en tu navegador para comenzar.
 
 ## 📁 Estructura del proyecto
 
+```
 alke-wallet/
 ├── index.html          → Login
 ├── menu.html           → Menú principal
@@ -26,11 +27,12 @@ alke-wallet/
 │   ├── sendmoney.css
 │   └── transactions.css
 └── js/
-├── login.js
-├── menu.js
-├── deposit.js
-├── sendmoney.js
-└── transactions.js
+    ├── login.js
+    ├── menu.js
+    ├── deposit.js
+    ├── sendmoney.js
+    └── transactions.js
+```
 
 ## ✨ Funcionalidades
 
