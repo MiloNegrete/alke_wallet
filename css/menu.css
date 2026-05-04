@@ -1,0 +1,123 @@
+body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 20px;
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    background: radial-gradient(circle at center, #1e293b 0%, #0f172a 100%);
+}
+
+.container-menu {
+    max-width: 420px;
+    width: 100%;
+    padding: 40px;
+    background: #ffffff;
+    border-radius: 20px;
+    border: 2px solid var(--accent-purple);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+}
+
+.menu-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.icon-box {
+    background: var(--deep-blue);
+    color: white;
+    padding: 12px;
+    border-radius: 12px;
+}
+
+.menu-header h1 {
+    margin: 0;
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--deep-blue);
+}
+
+.balance-card {
+    background: var(--expense-bg);
+    border-radius: 14px;
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.balance-card small {
+    display: block;
+    color: #64748b;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.balance-card h2 {
+    margin: 0;
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: var(--deep-blue);
+}
+
+.menu-options {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.menu-btn {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 18px 20px;
+    background: #f8fafc;
+    border-radius: 14px;
+    border: 2px solid #e2e8f0;
+    color: var(--deep-blue);
+    font-weight: 600;
+    font-size: 1rem;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.menu-btn:hover {
+    border-color: var(--accent-purple);
+    background: white;
+    color: var(--accent-purple);
+    text-decoration: none;
+    transform: translateX(5px);
+}
+
+.menu-btn i {
+    font-size: 1.3rem;
+    width: 30px;
+    text-align: center;
+    color: var(--accent-purple);
+}
+
+.btn-logout {
+    display: block;
+    text-align: center;
+    color: #94a3b8;
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-decoration: none;
+    margin-top: 10px;
+    transition: color 0.3s;
+}
+
+.btn-logout:hover {
+    color: #ef4444;
+    text-decoration: none;
+}
+
+@media (max-width: 480px) {
+    .container-menu { padding: 25px; }
+}

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wallet - Enviar Dinero</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="./css/global.css">
+    <link rel="stylesheet" href="./css/sendmoney.css">
+</head>
+
+<body>
+
+    <div class="container-send">
+        <h2><i class="fas fa-paper-plane mr-2" style="color: var(--brand-blue);"></i>Enviar Dinero</h2>
+
+        <div class="balance-card mb-4">
+            <small>Saldo disponible</small>
+            <h3 id="saldoActual">$0</h3>
+        </div>
+
+        <form id="sendForm">
+            <div class="form-group">
+                <label for="searchContact">Buscar en la agenda:</label>
+                <div class="input-group">
+                    <input type="text" class="form-control" id="searchContact" 
+                           list="contactsData" placeholder="Nombre, alias o banco...">
+                    <datalist id="contactsData"></datalist>
+                </div>
+            </div>
+
+            <button type="button" id="btnAddContact" class="btn btn-primary btn-block">
+                <i class="fas fa-user-plus mr-2"></i>Agregar nuevo contacto
+            </button>
+
+            <h3 class="mt-4">Contactos Frecuentes</h3>
+
+            <ul id="contactList" class="list-group list-group-flush">
+                <li class="list-group-item">
+                    <div class="contact-info">
+                        <span class="contact-name">Juan Pérez</span>
+                        <span class="contact-details"><i class="fas fa-university mr-1"></i> Banco Estado | Alias: Juanito</span>
+                    </div>
+                    <div class="contact-action">
+                        <button type="button" class="btn btn-outline-primary btn-sm">Seleccionar</button>
+                    </div>
+                </li>
+                <li class="list-group-item">
+                    <div class="contact-info">
+                        <span class="contact-name">Rosita Burgos</span>
+                        <span class="contact-details"><i class="fas fa-university mr-1"></i> Banco de Chile | Alias: Rose</span>
+                    </div>
+                    <div class="contact-action">
+                        <button type="button" class="btn btn-outline-primary btn-sm">Seleccionar</button>
+                    </div>
+                </li>
+            </ul>
+
+            <!-- Panel de monto (se muestra al seleccionar contacto) -->
+            <div id="panelMonto" style="display:none;">
+                <hr>
+                <p class="mb-2">Enviando a: <strong id="nombreDestinatario"></strong></p>
+                <div class="form-group">
+                    <label for="montoEnvio">Monto a enviar:</label>
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">$</span>
+                        </div>
+                        <input type="number" class="form-control" id="montoEnvio"
+                               placeholder="0.00" min="1" step="0.01">
+                    </div>
+                </div>
+                <div id="alertaEnvio"></div>
+                <button type="submit" class="btn btn-primary btn-block mt-2">
+                    Confirmar envío <i class="fas fa-arrow-right ml-2"></i>
+                </button>
+            </div>
+
+        </form>
+
+        <!-- Modal de contacto nuevo -->
+        <div id="modalContacto" style="display:none;">
+            <hr>
+            <h5>Nuevo contacto</h5>
+            <div class="form-group">
+                <input type="text" class="form-control mb-2" id="nuevoNombre" placeholder="Nombre completo">
+                <input type="text" class="form-control mb-2" id="nuevoBanco" placeholder="Institución bancaria">
+                <input type="text" class="form-control mb-2" id="nuevoAlias" placeholder="Alias">
+            </div>
+            <button type="button" id="btnGuardarContacto" class="btn btn-primary btn-block">
+                <i class="fas fa-save mr-2"></i>Guardar contacto
+            </button>
+            <button type="button" id="btnCancelarContacto" class="btn btn-secondary btn-block mt-2">
+                Cancelar
+            </button>
+        </div>
+
+        <a href="menu.html" class="btn btn-secondary btn-block mt-3">
+            <i class="fas fa-chevron-left mr-2"></i>Volver al Menú Principal
+        </a>
+    </div>
+
+    <script src="./js/sendmoney.js"></script>
+</body>
+</html>

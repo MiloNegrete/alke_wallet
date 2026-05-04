@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bienvenido a tu Wallet</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+     <link rel="stylesheet" href="./css/global.css">
+     <link rel="stylesheet" href="./css/login.css">
+</head>
+<body>
+
+    <h1 class="welcome-text">Bienvenido</h1>
+
+    <div class="login-card">
+        <div class="card-header-wallet">
+            <div class="icon-box">
+                <i class="fas fa-wallet fa-lg"></i>
+            </div>
+            <h2>Billetera Virtual</h2>
+        </div>
+
+        <form>
+            <div class="form-group">
+                <span class="required-tag">Requerido</span>
+                <label for="email">Correo electrónico</label>
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text"><i class="fas fa-envelope"></i></span>
+                    </div>
+                    <input type="email" id="email" class="form-control" placeholder="nombre@correo.com" required>
+                </div>
+            </div>
+
+            <div class="form-group mt-3">
+                <span class="required-tag">Requerido</span>
+                <label for="password">Contraseña</label>
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text"><i class="fas fa-lock"></i></span>
+                    </div>
+                    <input type="password" id="password" class="form-control" placeholder="••••••••" required>
+                </div>
+            </div>
+
+            <div class="actions-row">
+                <button type="submit" class="btn btn-login">
+                    Iniciar Sesión <i class="fas fa-sign-in-alt ml-2"></i>
+                </button>
+                
+                <a href="menu.html" class="btn btn-menu-alt" title="Ir al Menú">
+                    <i class="fas fa-home"></i>
+                </a>
+            </div>
+        </form>
+    </div>
+
+    <script src="./js/login.js"></script>
+</body>
+</html>

@@ -1,0 +1,171 @@
+
+        body {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin: 0;
+            padding: 20px;
+            font-family: 'Segoe UI', system-ui, sans-serif;
+            
+            /* Fondo azul profundo con gradiente sutil */
+            background: radial-gradient(circle at center, #1e293b 0%, #0f172a 100%);
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        /* Marca de agua de dinero sutil en el fondo */
+        body::before {
+            content: "\f3d1"; /* Icono de fajo de billetes */
+            font-family: "Font Awesome 5 Free";
+            font-weight: 900;
+            position: absolute;
+            font-size: clamp(20rem, 50vw, 40rem);
+            color: rgba(255, 255, 255, 0.03); /* Muy tenue para que no distraiga */
+            top: 10%;
+            right: -5%;
+            z-index: -1;
+            transform: rotate(-15deg);
+        }
+
+        .welcome-text {
+            color: var(--text-light);
+            font-weight: 700;
+            margin-bottom: 2rem;
+            text-align: center;
+            font-size: clamp(1.5rem, 4vw, 2.5rem);
+            text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+        }
+
+        .login-card {
+            max-width: 450px;
+            width: 100%;
+            padding: 40px;
+            border-radius: 20px;
+            background: #ffffff;
+            /* Borde brillante sutil estilo premium */
+            border: 2px solid var(--accent-purple);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+            transition: all 0.3s ease;
+        }
+
+        .login-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 30px 60px -12px rgba(0, 0, 0, 0.6);
+        }
+
+        .card-header-wallet {
+            display: flex;
+            align-items: center;
+            margin-bottom: 2rem;
+        }
+
+        .icon-box {
+            background: var(--deep-blue);
+            color: white;
+            padding: 12px;
+            border-radius: 12px;
+            margin-right: 15px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+
+        .card-header-wallet h2 {
+            margin: 0;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--deep-blue);
+        }
+
+        .form-group label {
+            font-weight: 600;
+            color: #475569;
+            font-size: 0.9rem;
+        }
+
+        .input-group {
+            background: #f8fafc;
+            border-radius: 10px;
+            overflow: hidden;
+            border: 1px solid #e2e8f0;
+            transition: border-color 0.3s;
+        }
+
+        .input-group:focus-within {
+            border-color: var(--brand-blue);
+        }
+
+        .input-group-text {
+            background: transparent;
+            border: none;
+            color: #64748b;
+        }
+
+        .form-control {
+            border: none;
+            background: transparent;
+            height: 50px;
+        }
+
+        .form-control:focus {
+            box-shadow: none;
+            background: transparent;
+        }
+
+        .required-tag {
+            font-size: 0.75rem;
+            color: #94a3b8;
+            float: right;
+            font-weight: 400;
+        }
+
+        /* Botones alineados y responsivos */
+        .actions-row {
+            display: flex;
+            gap: 15px;
+            margin-top: 2rem;
+        }
+
+        .btn-login {
+            flex: 2;
+            background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+            border: none;
+            color: white;
+            font-weight: 700;
+            border-radius: 10px;
+            padding: 12px;
+            transition: all 0.3s;
+        }
+
+        .btn-login:hover {
+            filter: brightness(1.1);
+            box-shadow: 0 10px 15px -3px rgba(59, 130, 246, 0.4);
+            color: white;
+        }
+
+        .btn-menu-alt {
+            flex: 1;
+            background: #f1f5f9;
+            color: #475569;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s;
+            font-size: 0.9rem;
+        }
+
+        .btn-menu-alt:hover {
+            background: #e2e8f0;
+            color: var(--deep-blue);
+            text-decoration: none;
+        }
+
+        /* Ajustes Mobile */
+        @media (max-width: 480px) {
+            .login-card { padding: 25px; }
+            .actions-row { flex-direction: column; }
+        .btn-menu-alt { padding: 12px; }
+    }
